@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   ignore_errors: yes
+   become: yes
+   tasks:
+        
+        - name: Install tree
+          yum:
+          name: tree 
