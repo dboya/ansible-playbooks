@@ -6,4 +6,12 @@
         
         - name: Install tree
           yum:
-          name: tree 
+            name: tree
+            state: present
+          when: ansible_distibution == "CentOS"
+
+        - name: install tree
+          apt:
+            name: tree
+            state: present
+          when: ansible_distribution == "Ubuntu
